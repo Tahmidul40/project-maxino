@@ -1,0 +1,90 @@
+.footer {
+  padding: 100px 0;
+
+  @include laptop {
+    padding: 50px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include largelaptop {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 75px;
+
+    @include largelaptop {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+
+    @include largelaptop {
+      width: 100%;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .one {
+      margin-left: 150px;
+
+      @include largelaptop {
+        margin-left: 0;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 20px;
+        color: $dark;
+        letter-spacing: -1px;
+        line-height: 60px;
+
+        &:hover {
+          color: $btn;
+        }
+      }
+    }
+  }
+
+  .attribution {
+    max-width: 1420px;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 16px;
+      color: $btn;
+      letter-spacing: -1px;
+      line-height: 60px;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}
